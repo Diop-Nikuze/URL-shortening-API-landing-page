@@ -1,6 +1,6 @@
 # Frontend Mentor - Shortly URL shortening API Challenge
 
-![Design preview for the Shortly URL shortening API coding challenge](./design/desktop-preview.jpg)
+![Design preview for the Shortly URL shortening API coding challenge](./src/design/desktop-preview.jpg)
 
 ## The challenge
 
@@ -13,7 +13,7 @@ Your users should be able to:
 - Receive an error message when the `form` is submitted if:
 - The `input` field is empty
 
-## Build
+## Built With
 
 - ReactJS
 - Chakra UI
