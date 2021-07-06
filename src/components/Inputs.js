@@ -12,7 +12,7 @@ const Inputs = ({
   copyUrl,
 }) => {
   return (
-    <Box bg="hsl(0, 0%, 75%) " w="1100px" m="auto" maxW="90%" h={300}>
+    <Box>
       <Box
         bgColor="hsl(257, 27%, 26%)"
         bgImage={bgImgInput}
@@ -20,14 +20,19 @@ const Inputs = ({
         bgPosition="contain"
         p={8}
         borderRadius="md"
+        w="1100px"
+        m="auto"
+        maxW="90%"
       >
-        <Box>
+        <Box textAlign="center">
           <form onSubmit={handleSubmit}>
             <Input
               placeholder="Shorten a link here..."
               onChange={onchange}
-              w={850}
-              mr={10}
+              w={700}
+              mr={5}
+              h={50}
+              borderRadius="5px"
               bg="white"
             />
 
@@ -37,7 +42,7 @@ const Inputs = ({
               }}
             >
               {loading ? (
-                <Spinner size="sm" height="20px" thickness="4px" />
+                <Spinner size="sm" height="22px" speed="0.3s" thickness="3px" />
               ) : (
                 <span>Shorten It</span>
               )}
@@ -45,33 +50,38 @@ const Inputs = ({
           </form>
         </Box>
       </Box>
-      <Box>
+      <Box bg="hsl(0, 0%, 75%)" h={300} mt={-70} pos="relative" zIndex="-1">
         {datas.map((url, index) => {
           return (
-            <HStack
-              key={index}
-              py={3}
-              px={5}
-              bgColor="white"
-              mt={5}
-              justifyContent="space-between"
-              borderRadius="5px"
-            >
-              <Heading fontSize="15px" color="hsl(257, 27%, 26%)">
-                {url.result.original_link}
-              </Heading>
-              <HStack>
-                <Heading fontSize="15px" mr={5} color="hsl(180, 66%, 49%)">
-                  {url.result.full_short_link}
+            <HStack key={index}>
+              <HStack
+                justifyContent="space-between"
+                bgColor="white"
+                py={7}
+                px={7}
+                w="1100px"
+                m="auto"
+                maxW="90%"
+                h={10}
+                mt={100}
+                borderRadius="md"
+              >
+                <Heading fontSize="15px" color="hsl(257, 27%, 26%)">
+                  {url.result.original_link}
                 </Heading>
-                <ButtonCopy
-                  onClick={() => {
-                    navigator.clipboard.writeText(url.result.short_link);
-                    handleCopyUrl();
-                  }}
-                >
-                  {copyUrl}
-                </ButtonCopy>
+                <HStack alignContent="center">
+                  <Heading fontSize="15px" mr={3} color="hsl(180, 66%, 49%)">
+                    {url.result.full_short_link}
+                  </Heading>
+                  <ButtonCopy
+                    onClick={() => {
+                      navigator.clipboard.writeText(url.result.short_link);
+                      handleCopyUrl();
+                    }}
+                  >
+                    {copyUrl}
+                  </ButtonCopy>
+                </HStack>
               </HStack>
             </HStack>
           );

@@ -54,7 +54,6 @@ function App() {
         copyUrl={copyUrl}
         handleCopyUrl={handleCopyUrl}
       />
-      {/* <ShortUrl  /> */}
     </ChakraProvider>
   );
 }
