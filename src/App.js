@@ -14,6 +14,8 @@ function App() {
   const [url, setUrl] = useState("");
   const [loading, setLoading] = useState(false);
   const [copyUrl, setCopyUrl] = useState("Copy");
+  const [primaryColor, setPrimaryColor] = useState("hsl(180, 66%, 49%)");
+  const [secondaryColor, setSecondaryColor] = useState("white");
 
   const onchange = (e) => {
     setSearch(e.target.value);
@@ -53,6 +55,10 @@ function App() {
         datas={datas}
         copyUrl={copyUrl}
         handleCopyUrl={handleCopyUrl}
+        primaryColor={primaryColor}
+        secondaryColor={secondaryColor}
+        setPrimaryColor={setPrimaryColor}
+        setSecondaryColor={setSecondaryColor}
       />
     </ChakraProvider>
   );

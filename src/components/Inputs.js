@@ -1,4 +1,4 @@
-import { Box, Input, Spinner, HStack, Heading } from "@chakra-ui/react";
+import { Box, Input, Spinner, HStack, Heading, Button } from "@chakra-ui/react";
 import bgImgInput from "../images/bg-shorten-desktop.svg";
 import styled from "@emotion/styled";
 
@@ -10,6 +10,10 @@ const Inputs = ({
   datas,
   handleCopyUrl,
   copyUrl,
+  primaryColor,
+  setPrimaryColor,
+  secondaryColor,
+  setSecondaryColor,
 }) => {
   return (
     <Box>
@@ -23,6 +27,7 @@ const Inputs = ({
         w="1100px"
         m="auto"
         maxW="90%"
+        position="relative"
       >
         <Box textAlign="center">
           <form onSubmit={handleSubmit}>
@@ -31,9 +36,10 @@ const Inputs = ({
               onChange={onchange}
               w={700}
               mr={5}
-              h={50}
+              // h={50}
               borderRadius="5px"
               bg="white"
+              size="md"
             />
 
             <ButtonClick
@@ -42,7 +48,13 @@ const Inputs = ({
               }}
             >
               {loading ? (
-                <Spinner size="sm" height="22px" speed="0.3s" thickness="3px" />
+                <Button
+                  isLoading
+                  loadingText="Loading"
+                  colorScheme="white"
+                  spinnerPlacement="end"
+                  size="xs"
+                ></Button>
               ) : (
                 <span>Shorten It</span>
               )}
@@ -50,7 +62,7 @@ const Inputs = ({
           </form>
         </Box>
       </Box>
-      <Box bg="hsl(0, 0%, 75%)" h={300} mt={-70} pos="relative" zIndex="-1">
+      <Box bg="#DCDCDC 	" h={300} mt={-70}>
         {datas.map((url, index) => {
           return (
             <HStack key={index}>
@@ -73,14 +85,25 @@ const Inputs = ({
                   <Heading fontSize="15px" mr={3} color="hsl(180, 66%, 49%)">
                     {url.result.full_short_link}
                   </Heading>
-                  <ButtonCopy
+                  <Button
                     onClick={() => {
                       navigator.clipboard.writeText(url.result.short_link);
+                      setPrimaryColor("hsl(257, 27%, 26%)");
+                      setSecondaryColor("white");
                       handleCopyUrl();
                     }}
+                    bg={primaryColor}
+                    color={secondaryColor}
+                    size="sm"
+                    borderRadius="5px "
+                    outline="none"
+                    border="none"
+                    fontSize="13px"
+                    _focus="none"
+                    _hover={{ color: "none" }}
                   >
                     {copyUrl}
-                  </ButtonCopy>
+                  </Button>
                 </HStack>
               </HStack>
             </HStack>
@@ -99,13 +122,13 @@ const ButtonClick = styled.button`
   outline: none;
 `;
 
-const ButtonCopy = styled.button`
-  color: white;
-  border-radius: 3px;
-  background-color: hsl(180, 66%, 49%);
-  padding: 5px 20px;
-  font-size: 15px;
-  outline: none;
-`;
+// const ButtonCopy = styled.button`
+//   color: white;
+//   border-radius: 3px;
+//   background-color: hsl(180, 66%, 49%);
+//   padding: 5px 20px;
+//   font-size: 15px;
+//   outline: none;
+// `;
 
 export default Inputs;
