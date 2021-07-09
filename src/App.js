@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+// import isUrl from "validator/lib/isURL";
 import Inputs from "./components/Inputs";
 import "@fontsource/poppins/500.css";
 import "@fontsource/poppins/700.css";
@@ -7,6 +8,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import theme from "./components/theme/theme";
 import HeaderNav from "./components/header/HeaderNav";
 import Hero from "./components/hero/Hero";
+import Stats from "./components/statistics/Stats";
 
 function App() {
   const [datas, setDatas] = useState([]);
@@ -24,6 +26,7 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setUrl(search);
+    setSearch("");
   };
 
   const handleCopyUrl = () => {
@@ -47,6 +50,7 @@ function App() {
     <ChakraProvider theme={theme}>
       <HeaderNav />
       <Hero />
+
       <Inputs
         handleSubmit={handleSubmit}
         onchange={onchange}
@@ -59,7 +63,9 @@ function App() {
         secondaryColor={secondaryColor}
         setPrimaryColor={setPrimaryColor}
         setSecondaryColor={setSecondaryColor}
+        search={search}
       />
+      <Stats />
     </ChakraProvider>
   );
 }

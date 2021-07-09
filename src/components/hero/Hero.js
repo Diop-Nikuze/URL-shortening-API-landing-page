@@ -18,7 +18,7 @@ const Hero = () => {
       justifyContent="space-between"
       my={50}
     >
-      <Box w={450}>
+      <Box w={450} maxW="90%">
         <Heading fontSize="3.3em" color="hsl(260, 8%, 14%)">
           More than just shorter links
         </Heading>

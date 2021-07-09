@@ -1,4 +1,4 @@
-import { Box, Input, Spinner, HStack, Heading, Button } from "@chakra-ui/react";
+import { Box, Input, HStack, Heading, Button } from "@chakra-ui/react";
 import bgImgInput from "../images/bg-shorten-desktop.svg";
 import styled from "@emotion/styled";
 
@@ -14,6 +14,7 @@ const Inputs = ({
   setPrimaryColor,
   secondaryColor,
   setSecondaryColor,
+  search,
 }) => {
   return (
     <Box>
@@ -27,7 +28,7 @@ const Inputs = ({
         w="1100px"
         m="auto"
         maxW="90%"
-        position="relative"
+        pos="relative"
       >
         <Box textAlign="center">
           <form onSubmit={handleSubmit}>
@@ -35,8 +36,9 @@ const Inputs = ({
               placeholder="Shorten a link here..."
               onChange={onchange}
               w={700}
+              maxW="70%"
               mr={5}
-              // h={50}
+              value={search}
               borderRadius="5px"
               bg="white"
               size="md"
@@ -49,6 +51,7 @@ const Inputs = ({
             >
               {loading ? (
                 <Button
+                  as="a"
                   isLoading
                   loadingText="Loading"
                   colorScheme="white"
@@ -62,7 +65,7 @@ const Inputs = ({
           </form>
         </Box>
       </Box>
-      <Box bg="#DCDCDC 	" h={300} mt={-70}>
+      <Box bg="#DCDCDC" h={200} mt={-59}>
         {datas.map((url, index) => {
           return (
             <HStack key={index}>
@@ -74,9 +77,10 @@ const Inputs = ({
                 w="1100px"
                 m="auto"
                 maxW="90%"
-                h={10}
                 mt={100}
                 borderRadius="md"
+                position="relative"
+                h={10}
               >
                 <Heading fontSize="15px" color="hsl(257, 27%, 26%)">
                   {url.result.original_link}
@@ -101,6 +105,7 @@ const Inputs = ({
                     fontSize="13px"
                     _focus="none"
                     _hover={{ color: "none" }}
+                    w={85}
                   >
                     {copyUrl}
                   </Button>
@@ -121,14 +126,5 @@ const ButtonClick = styled.button`
   padding: 8px 20px;
   outline: none;
 `;
-
-// const ButtonCopy = styled.button`
-//   color: white;
-//   border-radius: 3px;
-//   background-color: hsl(180, 66%, 49%);
-//   padding: 5px 20px;
-//   font-size: 15px;
-//   outline: none;
-// `;
 
 export default Inputs;
