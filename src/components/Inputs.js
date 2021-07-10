@@ -1,21 +1,8 @@
-import { Box, Input, HStack, Heading, Button } from "@chakra-ui/react";
+import { Box, Input, Button } from "@chakra-ui/react";
 import bgImgInput from "../images/bg-shorten-desktop.svg";
 import styled from "@emotion/styled";
 
-const Inputs = ({
-  handleSubmit,
-  onchange,
-  loading,
-  setLoading,
-  datas,
-  handleCopyUrl,
-  copyUrl,
-  primaryColor,
-  setPrimaryColor,
-  secondaryColor,
-  setSecondaryColor,
-  search,
-}) => {
+const Inputs = ({ handleSubmit, onchange, loading, setLoading, search }) => {
   return (
     <Box>
       <Box
@@ -28,7 +15,9 @@ const Inputs = ({
         w="1100px"
         m="auto"
         maxW="90%"
-        pos="relative"
+        pos="absolute"
+        top="-50px"
+        left="127px"
       >
         <Box textAlign="center">
           <form onSubmit={handleSubmit}>
@@ -64,56 +53,6 @@ const Inputs = ({
             </ButtonClick>
           </form>
         </Box>
-      </Box>
-      <Box bg="#DCDCDC" h={200} mt={-59}>
-        {datas.map((url, index) => {
-          return (
-            <HStack key={index}>
-              <HStack
-                justifyContent="space-between"
-                bgColor="white"
-                py={7}
-                px={7}
-                w="1100px"
-                m="auto"
-                maxW="90%"
-                mt={100}
-                borderRadius="md"
-                position="relative"
-                h={10}
-              >
-                <Heading fontSize="15px" color="hsl(257, 27%, 26%)">
-                  {url.result.original_link}
-                </Heading>
-                <HStack alignContent="center">
-                  <Heading fontSize="15px" mr={3} color="hsl(180, 66%, 49%)">
-                    {url.result.full_short_link}
-                  </Heading>
-                  <Button
-                    onClick={() => {
-                      navigator.clipboard.writeText(url.result.short_link);
-                      setPrimaryColor("hsl(257, 27%, 26%)");
-                      setSecondaryColor("white");
-                      handleCopyUrl();
-                    }}
-                    bg={primaryColor}
-                    color={secondaryColor}
-                    size="sm"
-                    borderRadius="5px "
-                    outline="none"
-                    border="none"
-                    fontSize="13px"
-                    _focus="none"
-                    _hover={{ color: "none" }}
-                    w={85}
-                  >
-                    {copyUrl}
-                  </Button>
-                </HStack>
-              </HStack>
-            </HStack>
-          );
-        })}
       </Box>
     </Box>
   );

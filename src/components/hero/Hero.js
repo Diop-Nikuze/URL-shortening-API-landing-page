@@ -16,7 +16,8 @@ const Hero = () => {
       ml="auto"
       alignItems="center"
       justifyContent="space-between"
-      my={50}
+      mb={100}
+      mt={45}
     >
       <Box w={450} maxW="90%">
         <Heading fontSize="3.3em" color="hsl(260, 8%, 14%)">

@@ -4,11 +4,14 @@ import axios from "axios";
 import Inputs from "./components/Inputs";
 import "@fontsource/poppins/500.css";
 import "@fontsource/poppins/700.css";
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, Box } from "@chakra-ui/react";
 import theme from "./components/theme/theme";
 import HeaderNav from "./components/header/HeaderNav";
 import Hero from "./components/hero/Hero";
 import Stats from "./components/statistics/Stats";
+import ShortLink from "./components/shortlink/ShortLink";
+import Boost from "./components/boost/Boost";
+import Footer from "./components/footer/Footer";
 
 function App() {
   const [datas, setDatas] = useState([]);
@@ -50,22 +53,27 @@ function App() {
     <ChakraProvider theme={theme}>
       <HeaderNav />
       <Hero />
-
-      <Inputs
-        handleSubmit={handleSubmit}
-        onchange={onchange}
-        loading={loading}
-        setLoading={setLoading}
-        datas={datas}
-        copyUrl={copyUrl}
-        handleCopyUrl={handleCopyUrl}
-        primaryColor={primaryColor}
-        secondaryColor={secondaryColor}
-        setPrimaryColor={setPrimaryColor}
-        setSecondaryColor={setSecondaryColor}
-        search={search}
-      />
-      <Stats />
+      <Box bg="#eff1f7" h="800px" pos="relative">
+        <Inputs
+          handleSubmit={handleSubmit}
+          onchange={onchange}
+          loading={loading}
+          setLoading={setLoading}
+          search={search}
+        />
+        <ShortLink
+          datas={datas}
+          copyUrl={copyUrl}
+          handleCopyUrl={handleCopyUrl}
+          primaryColor={primaryColor}
+          secondaryColor={secondaryColor}
+          setPrimaryColor={setPrimaryColor}
+          setSecondaryColor={setSecondaryColor}
+        />
+        <Stats />
+      </Box>
+      <Boost />
+      <Footer />
     </ChakraProvider>
   );
 }
