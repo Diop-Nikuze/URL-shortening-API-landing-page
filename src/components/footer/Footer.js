@@ -1,9 +1,9 @@
-import { Box, Image, List, ListItem, Heading, HStack } from "@chakra-ui/react";
-import logo from "../../images/logo.svg";
+import { Box } from "@chakra-ui/react";
 import fbLogo from "../../images/icon-facebook.svg";
 import twitterLogo from "../../images/icon-twitter.svg";
 import pintLogo from "../../images/icon-pinterest.svg";
 import instaLogo from "../../images/icon-instagram.svg";
+import styled from "@emotion/styled";
 
 const Footer = () => {
   return (
@@ -12,6 +12,7 @@ const Footer = () => {
         w="1024px"
         margin="auto"
         color="white"
+        maxW="90%"
         pt={20}
         pb={10}
         d="flex"
@@ -28,70 +29,95 @@ const Footer = () => {
         </Box>
 
         <Box d="flex" fontSize="15px" color="hsl(0, 0%, 75%)">
-          <ul style={{ listStyle: "none", marginRight: "35px" }}>
-            <h3
-              style={{
-                color: "white",
-                marginBottom: "15px",
-                fontWeight: "700",
-              }}
-            >
-              Features
-            </h3>
-            <li style={{ marginBottom: "10px", fontSize: "14px" }}>
-              Link Shortening
-            </li>
-            <li style={{ marginBottom: "10px", fontSize: "14px" }}>
-              Branded Link
-            </li>
-            <li style={{ marginBottom: "10px", fontSize: "14px" }}>
-              Analytics
-            </li>
-          </ul>
-          <ul style={{ listStyle: "none", marginRight: "35px" }}>
-            <h3
-              style={{
-                color: "white",
-                marginBottom: "15px",
-                fontWeight: "700",
-              }}
-            >
-              Ressources
-            </h3>
-            <li style={{ marginBottom: "10px", fontSize: "14px" }}>Blog</li>
-            <li style={{ marginBottom: "10px", fontSize: "14px" }}>
-              Developers
-            </li>
-            <li style={{ marginBottom: "10px", fontSize: "14px" }}>Support</li>
-          </ul>
-          <ul style={{ listStyle: "none", marginRight: "35px" }}>
-            <h3
-              style={{
-                color: "white",
-                marginBottom: "15px",
-                fontWeight: "700",
-              }}
-            >
-              Company
-            </h3>
-            <li style={{ marginBottom: "10px", fontSize: "14px" }}>About</li>
-            <li style={{ marginBottom: "10px", fontSize: "14px" }}>Our team</li>
-            <li style={{ marginBottom: "10px", fontSize: "14px" }}>Careers</li>
-            <li style={{ marginBottom: "10px", fontSize: "14px" }}>Contact</li>
-          </ul>
+          <List>
+            <ListItemTitle>Features</ListItemTitle>
+            <ListItem>Link Shortening</ListItem>
+            <ListItem>Branded Link</ListItem>
+            <ListItem>Analytics</ListItem>
+          </List>
+          <List>
+            <ListItemTitle>Ressources</ListItemTitle>
+            <ListItem>Blog</ListItem>
+            <ListItem>Developers</ListItem>
+            <ListItem>Support</ListItem>
+          </List>
+          <List>
+            <ListItemTitle>Company</ListItemTitle>
+            <ListItem>About</ListItem>
+            <ListItem>Our team</ListItem>
+            <ListItem>Careers</ListItem>
+            <ListItem>Contact</ListItem>
+          </List>
         </Box>
-        <Box d="flex">
-          <Image mr={5} src={fbLogo}></Image>
-          <Image mr={5} src={twitterLogo}></Image>
-          <Image mr={5} src={pintLogo}></Image>
-          <Image src={instaLogo}></Image>
-        </Box>
+        <ListImage>
+          <ListItemImage>
+            <Image src={fbLogo}></Image>
+          </ListItemImage>
+          <ListItemImage>
+            <Image src={twitterLogo}></Image>
+          </ListItemImage>
+          <ListItemImage>
+            <Image src={pintLogo}></Image>
+          </ListItemImage>
+          <ListItemImage>
+            <Image src={instaLogo}></Image>
+          </ListItemImage>
+        </ListImage>
+      </Box>
+
+      <Box color="white" textAlign="center" fontSize="13px">
+        Challenge by{" "}
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+          Frontend Mentor
+        </a>
+        . Coded by{" "}
+        <a
+          href="https://github.com/Nikuze"
+          style={{ textDecoration: "underline" }}
+        >
+          Diop Nikuze
+        </a>
+        .
       </Box>
     </Box>
   );
 };
 
-export default Footer;
+const List = styled.ul`
+  margin-right: 40px;
+`;
 
-{
-}
+const ListItem = styled.li`
+  list-style-type: none;
+  margin-bottom: 7px;
+  font-size: 14px;
+  cursor: pointer;
+
+  &:hover {
+    color: hsl(180, 66%, 49%);
+  }
+`;
+
+const ListItemTitle = styled.h3`
+  color: white;
+  margin-bottom: 15px;
+  fonnt-weight: 700;
+`;
+
+const ListImage = styled.ul`
+  display: flex;
+  align-items: center;
+`;
+
+const ListItemImage = styled.li`
+  list-style-type: none;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+`;
+
+const Image = styled.img``;
+
+export default Footer;

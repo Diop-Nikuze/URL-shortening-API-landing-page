@@ -23,7 +23,6 @@ const Stats = () => {
       </Box>
       <HStack
         justifyContent="space-between"
-        // alignItems="center"
         mt={85}
         position="relative"
         _after={{

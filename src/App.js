@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-// import isUrl from "validator/lib/isURL";
 import Inputs from "./components/Inputs";
 import "@fontsource/poppins/500.css";
 import "@fontsource/poppins/700.css";
