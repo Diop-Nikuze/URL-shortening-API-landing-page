@@ -25,63 +25,18 @@ const Footer = () => {
             />
           </svg>
         </Box>
-        <Box d="flex" color="hsl(0, 0%, 75%)">
-          <List listStyle="none" mr={10}>
-            <Heading fontSize="14px" mb={5} color="white">
-              Features
-            </Heading>
-            <ListItem lineHeight="2.5" fontSize="14px">
-              Link Shortening
-            </ListItem>
-            <ListItem lineHeight="2.5" fontSize="14px">
-              Branded Links
-            </ListItem>
-            <ListItem lineHeight="2.5" fontSize="14px">
-              Analytics
-            </ListItem>
-          </List>
-          <List listStyle="none" mr={10}>
-            <Heading fontSize="14px" mb={5} color="white">
-              Resources
-            </Heading>
-            <ListItem lineHeight="2.5" fontSize="14px">
-              Blog
-            </ListItem>
-            <ListItem lineHeight="2.5" fontSize="14px">
-              Developers
-            </ListItem>
-            <ListItem lineHeight="2.5" fontSize="14px">
-              Support
-            </ListItem>
-          </List>
-          <List listStyle="none">
-            <Heading fontSize="14px" mb={5} color="white">
-              Company
-            </Heading>
-            <ListItem lineHeight="2.5" fontSize="14px">
-              About
-            </ListItem>
-            <ListItem lineHeight="2.5" fontSize="14px">
-              Our team
-            </ListItem>
-            <ListItem lineHeight="2.5" fontSize="14px">
-              Careers
-            </ListItem>
-            <ListItem lineHeight="2.5" fontSize="14px">
-              Contact
-            </ListItem>
-          </List>
-        </Box>
-
-        <Box d="flex">
-          <Image mr={5} cursor="pointer" src={fbLogo}></Image>
-          <Image mr={5} cursor="pointer" src={twitterLogo}></Image>
-          <Image mr={5} cursor="pointer" src={pintLogo}></Image>
-          <Image src={instaLogo} cursor="pointer"></Image>
-        </Box>
       </HStack>
     </Box>
   );
 };
 
 export default Footer;
+
+{
+  /* <Box d="flex">
+<Image mr={5} cursor="pointer" src={fbLogo}></Image>
+<Image mr={5} cursor="pointer" src={twitterLogo}></Image>
+<Image mr={5} cursor="pointer" src={pintLogo}></Image>
+<Image src={instaLogo} cursor="pointer"></Image>
+</Box> */
+}
