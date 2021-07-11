@@ -8,14 +8,15 @@ import instaLogo from "../../images/icon-instagram.svg";
 const Footer = () => {
   return (
     <Box bg="hsl(260, 8%, 14%)">
-      <HStack
+      <Box
         w="1024px"
         margin="auto"
         color="white"
         pt={20}
         pb={10}
-        alignItems="flex-start"
+        d="flex"
         justifyContent="space-between"
+        alignItems="flex-start"
       >
         <Box>
           <svg xmlns="http://www.w3.org/2000/svg" width="121" height="33">
@@ -25,7 +26,67 @@ const Footer = () => {
             />
           </svg>
         </Box>
-      </HStack>
+
+        <Box d="flex" fontSize="15px" color="hsl(0, 0%, 75%)">
+          <ul style={{ listStyle: "none", marginRight: "35px" }}>
+            <h3
+              style={{
+                color: "white",
+                marginBottom: "15px",
+                fontWeight: "700",
+              }}
+            >
+              Features
+            </h3>
+            <li style={{ marginBottom: "10px", fontSize: "14px" }}>
+              Link Shortening
+            </li>
+            <li style={{ marginBottom: "10px", fontSize: "14px" }}>
+              Branded Link
+            </li>
+            <li style={{ marginBottom: "10px", fontSize: "14px" }}>
+              Analytics
+            </li>
+          </ul>
+          <ul style={{ listStyle: "none", marginRight: "35px" }}>
+            <h3
+              style={{
+                color: "white",
+                marginBottom: "15px",
+                fontWeight: "700",
+              }}
+            >
+              Ressources
+            </h3>
+            <li style={{ marginBottom: "10px", fontSize: "14px" }}>Blog</li>
+            <li style={{ marginBottom: "10px", fontSize: "14px" }}>
+              Developers
+            </li>
+            <li style={{ marginBottom: "10px", fontSize: "14px" }}>Support</li>
+          </ul>
+          <ul style={{ listStyle: "none", marginRight: "35px" }}>
+            <h3
+              style={{
+                color: "white",
+                marginBottom: "15px",
+                fontWeight: "700",
+              }}
+            >
+              Company
+            </h3>
+            <li style={{ marginBottom: "10px", fontSize: "14px" }}>About</li>
+            <li style={{ marginBottom: "10px", fontSize: "14px" }}>Our team</li>
+            <li style={{ marginBottom: "10px", fontSize: "14px" }}>Careers</li>
+            <li style={{ marginBottom: "10px", fontSize: "14px" }}>Contact</li>
+          </ul>
+        </Box>
+        <Box d="flex">
+          <Image mr={5} src={fbLogo}></Image>
+          <Image mr={5} src={twitterLogo}></Image>
+          <Image mr={5} src={pintLogo}></Image>
+          <Image src={instaLogo}></Image>
+        </Box>
+      </Box>
     </Box>
   );
 };
@@ -33,10 +94,4 @@ const Footer = () => {
 export default Footer;
 
 {
-  /* <Box d="flex">
-<Image mr={5} cursor="pointer" src={fbLogo}></Image>
-<Image mr={5} cursor="pointer" src={twitterLogo}></Image>
-<Image mr={5} cursor="pointer" src={pintLogo}></Image>
-<Image src={instaLogo} cursor="pointer"></Image>
-</Box> */
 }
