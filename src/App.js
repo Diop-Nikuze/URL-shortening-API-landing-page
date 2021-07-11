@@ -53,7 +53,7 @@ function App() {
     <ChakraProvider theme={theme}>
       <HeaderNav />
       <Hero />
-      <Box bg="#eff1f7" h="800px" pos="relative">
+      <Box bg="#eff1f7" h="700px" pos="relative">
         <Inputs
           handleSubmit={handleSubmit}
           onchange={onchange}

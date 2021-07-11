@@ -17,7 +17,7 @@ Your users should be able to:
 
 - ReactJS
 - Chakra UI
-- Styled Components
+- Emotion
 
 ### More Details :
 

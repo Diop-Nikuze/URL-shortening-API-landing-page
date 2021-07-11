@@ -5,8 +5,16 @@ import customizeImage from "../../images/icon-fully-customizable.svg";
 
 const Stats = () => {
   return (
-    <Box pos="absolute" top="130px" left="127px">
-      <Box textAlign="center" maxW="90%" margin="auto" w="520px" mt={55}>
+    <Box
+      width="1024px"
+      maxW="90%"
+      m="0 auto"
+      position="absolute"
+      left="-50%"
+      right="-50%"
+      mt={85}
+    >
+      <Box textAlign="center" maxW="90%" margin="auto" w="520px">
         <Heading color=" hsl(255, 11%, 22%)"> Advanced Statistics</Heading>
         <Text fontSize="18px" mt={4} color=" hsl(257, 7%, 63%)">
           Track how your links are performing across the web with our advanced
@@ -14,10 +22,8 @@ const Stats = () => {
         </Text>
       </Box>
       <HStack
-        w="1100px"
-        margin="auto"
         justifyContent="space-between"
-        alignItems="center"
+        // alignItems="center"
         mt={85}
         position="relative"
         _after={{
@@ -30,7 +36,7 @@ const Stats = () => {
           bg: "hsl(180, 66%, 49%)",
         }}
       >
-        <Box bg="white" w={350} p={7} borderRadius="base" zIndex="1">
+        <Box bg="white" w={330} p={5} borderRadius="base" zIndex="1">
           <Image
             borderRadius="full"
             p={4}
@@ -48,8 +54,8 @@ const Stats = () => {
           </Text>
         </Box>
         maxW="90%"
-        <Box w={350} borderRadius="base" position="relative" zIndex="1">
-          <Box mt="-80px" pos="absolute" p={7} bg="white">
+        <Box w={330} borderRadius="base" position="relative" zIndex="1">
+          <Box mt="-80px" pos="absolute" p={5} bg="white">
             <Image
               borderRadius="full"
               p={4}
@@ -68,9 +74,8 @@ const Stats = () => {
             </Text>
           </Box>
         </Box>
-        maxW="90%"
-        <Box w={350} borderRadius="base" zIndex="1">
-          <Box mt="-40px" pos="absolute" p={7} bg="white">
+        <Box w={310} borderRadius="base" zIndex="1">
+          <Box mt="-40px" pos="absolute" p={5} bg="white">
             <Image
               borderRadius="full"
               p={4}

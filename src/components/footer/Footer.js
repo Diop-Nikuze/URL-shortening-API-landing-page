@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <Box bg="hsl(260, 8%, 14%)">
       <HStack
-        w="1100px"
+        w="1024px"
         margin="auto"
         color="white"
         pt={20}
@@ -30,13 +30,13 @@ const Footer = () => {
             <Heading fontSize="14px" mb={5} color="white">
               Features
             </Heading>
-            <ListItem cursor="pointer" lineHeight="2.5" fontSize="14px">
+            <ListItem lineHeight="2.5" fontSize="14px">
               Link Shortening
             </ListItem>
-            <ListItem cursor="pointer" lineHeight="2.5" fontSize="14px">
+            <ListItem lineHeight="2.5" fontSize="14px">
               Branded Links
             </ListItem>
-            <ListItem cursor="pointer" lineHeight="2.5" fontSize="14px">
+            <ListItem lineHeight="2.5" fontSize="14px">
               Analytics
             </ListItem>
           </List>
@@ -44,13 +44,13 @@ const Footer = () => {
             <Heading fontSize="14px" mb={5} color="white">
               Resources
             </Heading>
-            <ListItem cursor="pointer" lineHeight="2.5" fontSize="14px">
+            <ListItem lineHeight="2.5" fontSize="14px">
               Blog
             </ListItem>
-            <ListItem cursor="pointer" lineHeight="2.5" fontSize="14px">
+            <ListItem lineHeight="2.5" fontSize="14px">
               Developers
             </ListItem>
-            <ListItem cursor="pointer" lineHeight="2.5" fontSize="14px">
+            <ListItem lineHeight="2.5" fontSize="14px">
               Support
             </ListItem>
           </List>
@@ -58,16 +58,16 @@ const Footer = () => {
             <Heading fontSize="14px" mb={5} color="white">
               Company
             </Heading>
-            <ListItem cursor="pointer" lineHeight="2.5" fontSize="14px">
+            <ListItem lineHeight="2.5" fontSize="14px">
               About
             </ListItem>
-            <ListItem cursor="pointer" lineHeight="2.5" fontSize="14px">
+            <ListItem lineHeight="2.5" fontSize="14px">
               Our team
             </ListItem>
-            <ListItem cursor="pointer" lineHeight="2.5" fontSize="14px">
+            <ListItem lineHeight="2.5" fontSize="14px">
               Careers
             </ListItem>
-            <ListItem cursor="pointer" lineHeight="2.5" fontSize="14px">
+            <ListItem lineHeight="2.5" fontSize="14px">
               Contact
             </ListItem>
           </List>
@@ -77,7 +77,7 @@ const Footer = () => {
           <Image mr={5} cursor="pointer" src={fbLogo}></Image>
           <Image mr={5} cursor="pointer" src={twitterLogo}></Image>
           <Image mr={5} cursor="pointer" src={pintLogo}></Image>
-          <Image src={instaLogo}></Image>
+          <Image src={instaLogo} cursor="pointer"></Image>
         </Box>
       </HStack>
     </Box>

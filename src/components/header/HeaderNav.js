@@ -6,9 +6,9 @@ const HeaderNav = () => {
     <HStack
       justifyContent="space-between"
       py={5}
+      width="1024px"
       maxW="90%"
-      w="1100px"
-      m="auto"
+      m="0 auto"
       color="hsl(257, 7%, 63%)"
       fontSize="15px"
     >

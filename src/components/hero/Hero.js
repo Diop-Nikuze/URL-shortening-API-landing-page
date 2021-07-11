@@ -12,8 +12,9 @@ const Hero = () => {
   return (
     <SimpleGrid
       columns={2}
-      maxWidth="90%"
-      ml="auto"
+      width="1024px"
+      maxW="90%"
+      m="0 auto"
       alignItems="center"
       justifyContent="space-between"
       mb={100}

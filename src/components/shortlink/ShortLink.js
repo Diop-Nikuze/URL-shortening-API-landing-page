@@ -18,12 +18,11 @@ const ShortLink = ({
               bgColor="white"
               py={7}
               px={7}
-              w="1100px"
-              m="auto"
+              w="1024px"
+              m="0 auto"
               maxW="90%"
-              mt={90}
+              mt={70}
               borderRadius="md"
-              position="relative"
               h={10}
             >
               <Heading fontSize="15px" color="hsl(257, 27%, 26%)">
@@ -36,9 +35,9 @@ const ShortLink = ({
                 <Button
                   onClick={() => {
                     navigator.clipboard.writeText(url.result.short_link);
+                    handleCopyUrl();
                     setPrimaryColor("hsl(257, 27%, 26%)");
                     setSecondaryColor("white");
-                    handleCopyUrl();
                   }}
                   bg={primaryColor}
                   color={secondaryColor}

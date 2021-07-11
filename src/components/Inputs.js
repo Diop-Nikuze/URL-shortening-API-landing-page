@@ -10,14 +10,15 @@ const Inputs = ({ handleSubmit, onchange, loading, setLoading, search }) => {
         bgImage={bgImgInput}
         backgroundSize="cover"
         bgPosition="contain"
-        p={8}
+        p={5}
         borderRadius="md"
-        w="1100px"
-        m="auto"
+        width="1024px"
         maxW="90%"
-        pos="absolute"
-        top="-50px"
-        left="127px"
+        m="0 auto"
+        position="absolute"
+        left="-50%"
+        right="-50%"
+        top={-10}
       >
         <Box textAlign="center">
           <form onSubmit={handleSubmit}>
@@ -25,8 +26,8 @@ const Inputs = ({ handleSubmit, onchange, loading, setLoading, search }) => {
               placeholder="Shorten a link here..."
               onChange={onchange}
               w={700}
-              maxW="70%"
               mr={5}
+              maxW="90%"
               value={search}
               borderRadius="5px"
               bg="white"
