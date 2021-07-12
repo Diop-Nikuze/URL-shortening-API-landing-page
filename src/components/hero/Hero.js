@@ -1,17 +1,15 @@
-import {
-  SimpleGrid,
-  Box,
-  Heading,
-  Text,
-  Button,
-  Image,
-} from "@chakra-ui/react";
+import { Box, Heading, Flex, Text, Button, Image } from "@chakra-ui/react";
 import bgBoost from "../../images/illustration-working.svg";
 
 const Hero = () => {
   return (
-    <SimpleGrid
-      columns={2}
+    <Flex
+      direction={{
+        base: "column-reverse",
+        sm: "column-reverse",
+        md: "initial",
+        lg: "initial",
+      }}
       width="1024px"
       maxW="90%"
       m="0 auto"
@@ -20,11 +18,30 @@ const Hero = () => {
       mb={100}
       mt={45}
     >
-      <Box w={450} maxW="90%">
-        <Heading fontSize="3.3em" color="hsl(260, 8%, 14%)">
+      <Box
+        maxW="90%"
+        textAlign={{
+          base: "center",
+          sm: "center",
+          md: "initial",
+          lg: "initial",
+        }}
+        my={{ base: "25px", sm: "25px", md: "initial", lg: "initial" }}
+      >
+        <Heading
+          fontSize={{ base: "2em", sm: "2em", md: "3.3em", lg: "3.3em" }}
+          color="hsl(260, 8%, 14%)"
+        >
           More than just shorter links
         </Heading>
-        <Text mt={2} mb={5} color="hsl(257, 7%, 63%)">
+        <Text
+          mt={2}
+          mb={5}
+          color="hsl(257, 7%, 63%)"
+          maxW="90%"
+          w={450}
+          fontSize={{ base: "15px", sm: "15px", md: "18px", lg: "18px" }}
+        >
           Build your brand’s recognition and get detailed insights on how your
           links are performing.
         </Text>
@@ -42,7 +59,7 @@ const Hero = () => {
       <Box>
         <Image src={bgBoost}></Image>
       </Box>
-    </SimpleGrid>
+    </Flex>
   );
 };
 

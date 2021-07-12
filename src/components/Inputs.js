@@ -1,4 +1,4 @@
-import { Box, Input, Button } from "@chakra-ui/react";
+import { Box, Input, Button, Text } from "@chakra-ui/react";
 import bgImgInput from "../images/bg-shorten-desktop.svg";
 import styled from "@emotion/styled";
 
@@ -32,12 +32,15 @@ const Inputs = ({ handleSubmit, onchange, loading, setLoading, search }) => {
               borderRadius="5px"
               bg="white"
               size="md"
+              type="url"
+              mb={{ base: " 10px", sm: " 10px", md: "10px", lg: "initial" }}
             />
 
             <ButtonClick
               onClick={() => {
                 setLoading(true);
               }}
+              type="submit"
             >
               {loading ? (
                 <Button
@@ -49,7 +52,7 @@ const Inputs = ({ handleSubmit, onchange, loading, setLoading, search }) => {
                   size="xs"
                 ></Button>
               ) : (
-                <span>Shorten It</span>
+                <Text as="span">Shorten It</Text>
               )}
             </ButtonClick>
           </form>
