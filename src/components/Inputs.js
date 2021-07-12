@@ -26,14 +26,14 @@ const Inputs = ({ handleSubmit, onchange, loading, setLoading, search }) => {
               placeholder="Shorten a link here..."
               onChange={onchange}
               w={700}
-              mr={5}
               maxW="90%"
               value={search}
               borderRadius="5px"
               bg="white"
               size="md"
               type="url"
-              mb={{ base: " 10px", sm: " 10px", md: "10px", lg: "initial" }}
+              mr={5}
+              mb={{ base: 3, sm: 3, md: 3, lg: 0 }}
             />
 
             <ButtonClick
@@ -52,7 +52,17 @@ const Inputs = ({ handleSubmit, onchange, loading, setLoading, search }) => {
                   size="xs"
                 ></Button>
               ) : (
-                <Text as="span">Shorten It</Text>
+                <Text
+                  as="span"
+                  p={{
+                    base: "8px 50px",
+                    sm: "8px 50px",
+                    md: "8px 50px",
+                    lg: "initial",
+                  }}
+                >
+                  Shorten It
+                </Text>
               )}
             </ButtonClick>
           </form>

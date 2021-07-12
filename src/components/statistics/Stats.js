@@ -12,11 +12,22 @@ const Stats = () => {
       pos="absolute"
       left="-50%"
       right="-50%"
-      mt={85}
+      mt={{ base: 150, sm: 150, md: 150, lg: 85 }}
     >
       <Box textAlign="center" maxW="90%" m="auto" w="520px">
-        <Heading color=" hsl(255, 11%, 22%)"> Advanced Statistics</Heading>
-        <Text fontSize="18px" mt={4} color=" hsl(257, 7%, 63%)">
+        <Heading
+          color=" hsl(255, 11%, 22%)"
+          fontSize={{ base: 25, sm: 25, md: 35, lg: "38px" }}
+        >
+          {" "}
+          Advanced Statistics
+        </Heading>
+        <Text
+          fontSize={{ base: 16, sm: 16, md: "18px", lg: "18px" }}
+          mt={4}
+          color=" hsl(257, 7%, 63%)"
+          lineHeight={{ base: 1.7, sm: 1.7, md: "initial", lg: "inittial" }}
+        >
           Track how your links are performing across the web with our advanced
           statistics dashboard.
         </Text>
