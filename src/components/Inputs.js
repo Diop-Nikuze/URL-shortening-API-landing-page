@@ -12,10 +12,10 @@ const Inputs = ({ handleSubmit, onchange, loading, setLoading, search }) => {
         bgPosition="contain"
         p={5}
         borderRadius="md"
-        width="1024px"
+        w="1024px"
         maxW="90%"
         m="0 auto"
-        position="absolute"
+        pos="absolute"
         left="-50%"
         right="-50%"
         top={-10}
@@ -65,6 +65,10 @@ const ButtonClick = styled.button`
   background-color: hsl(180, 66%, 49%);
   padding: 8px 20px;
   outline: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
 `;
 
 export default Inputs;

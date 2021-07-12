@@ -6,7 +6,7 @@ const HeaderNav = () => {
     <HStack
       justifyContent="space-between"
       py={5}
-      width="1024px"
+      w="1024px"
       maxW="90%"
       m="0 auto"
       color="hsl(257, 7%, 63%)"
@@ -17,17 +17,35 @@ const HeaderNav = () => {
           <Image src={logo} alt="logo"></Image>
         </Box>
         <Box>
-          <Link href="#" mr={7}>
+          <Link
+            href="#"
+            mr={7}
+            _hover={{ textDecor: "none", color: "hsl(260, 8%, 14%)" }}
+          >
             Features
           </Link>
-          <Link href="#" mr={7}>
+          <Link
+            href="#"
+            mr={7}
+            _hover={{ textDecor: "none", color: "hsl(260, 8%, 14%)" }}
+          >
             Pricing
           </Link>
-          <Link href="#"> Resources</Link>
+          <Link
+            href="#"
+            _hover={{ textDecor: "none", color: "hsl(260, 8%, 14%)" }}
+          >
+            {" "}
+            Resources
+          </Link>
         </Box>
       </HStack>
       <Box>
-        <Link href="#" mr={7}>
+        <Link
+          href="#"
+          mr={7}
+          _hover={{ textDecor: "none", color: "hsl(260, 8%, 14%)" }}
+        >
           Login
         </Link>
         <Link
@@ -37,6 +55,7 @@ const HeaderNav = () => {
           py={1.5}
           px={4}
           color="white"
+          _hover={{ textDecor: "none", opacity: "0.6" }}
         >
           Sign Up
         </Link>

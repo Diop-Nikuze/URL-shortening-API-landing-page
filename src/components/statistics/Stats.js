@@ -9,12 +9,12 @@ const Stats = () => {
       width="1024px"
       maxW="90%"
       m="0 auto"
-      position="absolute"
+      pos="absolute"
       left="-50%"
       right="-50%"
       mt={85}
     >
-      <Box textAlign="center" maxW="90%" margin="auto" w="520px">
+      <Box textAlign="center" maxW="90%" m="auto" w="520px">
         <Heading color=" hsl(255, 11%, 22%)"> Advanced Statistics</Heading>
         <Text fontSize="18px" mt={4} color=" hsl(257, 7%, 63%)">
           Track how your links are performing across the web with our advanced
@@ -24,7 +24,7 @@ const Stats = () => {
       <HStack
         justifyContent="space-between"
         mt={85}
-        position="relative"
+        pos="relative"
         _after={{
           content: '""',
           pos: "absolute",
@@ -53,7 +53,7 @@ const Stats = () => {
           </Text>
         </Box>
         maxW="90%"
-        <Box w={330} borderRadius="base" position="relative" zIndex="1">
+        <Box w={330} borderRadius="base" pos="relative" zIndex="1">
           <Box mt="-80px" pos="absolute" p={5} bg="white">
             <Image
               borderRadius="full"

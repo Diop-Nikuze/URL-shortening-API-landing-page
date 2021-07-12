@@ -1,0 +1,7 @@
+.socialIcon {
+  fill: white;
+}
+
+.socialIcon:hover {
+  fill: hsl(180, 66%, 49%);
+}

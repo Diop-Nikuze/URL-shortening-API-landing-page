@@ -20,7 +20,8 @@ const Boost = () => {
           py={1.5}
           px={5}
           color="white"
-          _hover={{ color: "none" }}
+          _focus="none"
+          _hover={{ bgColor: "rgb(67, 233, 233)" }}
         >
           Get Started
         </Button>

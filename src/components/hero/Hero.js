@@ -34,7 +34,7 @@ const Hero = () => {
           py={1.5}
           px={5}
           color="white"
-          _hover={{ color: "none" }}
+          _hover={{ color: "none", opacity: ".6" }}
         >
           Get Started
         </Button>

@@ -47,7 +47,7 @@ const ShortLink = ({
                   border="none"
                   fontSize="13px"
                   _focus="none"
-                  _hover={{ color: "none" }}
+                  _hover={{ color: "none", opacity: ".5" }}
                   w={85}
                 >
                   {copyUrl}
