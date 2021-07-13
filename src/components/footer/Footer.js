@@ -26,7 +26,7 @@ const Footer = () => {
           md: "flex-start",
           lg: "flex-start",
         }}
-        textAlign="center"
+        textAlign={{ base: "center", sm: "center", md: "left", lg: "left" }}
       >
         <Box>
           <svg xmlns="http://www.w3.org/2000/svg" width="121" height="33">
