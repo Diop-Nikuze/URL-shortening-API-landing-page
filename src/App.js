@@ -52,7 +52,11 @@ function App() {
     <ChakraProvider theme={theme}>
       <HeaderNav />
       <Hero />
-      <Box bg="#eff1f7" h="770px" pos="relative">
+      <Box
+        bg="#eff1f7"
+        h={{ base: "1200px", sm: "1200px", md: "1200px", lg: "770px" }}
+        pos="relative"
+      >
         <Inputs
           handleSubmit={handleSubmit}
           onchange={onchange}

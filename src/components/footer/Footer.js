@@ -13,8 +13,20 @@ const Footer = () => {
         pt={20}
         pb={10}
         d="flex"
+        flexDirection={{
+          base: "column",
+          sm: "column",
+          md: "initial",
+          lg: "initial",
+        }}
         justifyContent="space-between"
-        alignItems="flex-start"
+        alignItems={{
+          base: "center",
+          sm: "center",
+          md: "flex-start",
+          lg: "flex-start",
+        }}
+        textAlign="center"
       >
         <Box>
           <svg xmlns="http://www.w3.org/2000/svg" width="121" height="33">
@@ -25,7 +37,17 @@ const Footer = () => {
           </svg>
         </Box>
 
-        <Box d="flex" fontSize="15px" color="hsl(0, 0%, 75%)">
+        <Box
+          d="flex"
+          flexDirection={{
+            base: "column",
+            sm: "column",
+            md: "initial",
+            lg: "initial",
+          }}
+          fontSize="15px"
+          color="hsl(0, 0%, 75%)"
+        >
           <List>
             <ListItemTitle>Features</ListItemTitle>
             <ListItem>Link Shortening</ListItem>

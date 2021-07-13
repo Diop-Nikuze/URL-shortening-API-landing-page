@@ -12,14 +12,13 @@ const Stats = () => {
       pos="absolute"
       left="-50%"
       right="-50%"
-      mt={{ base: 150, sm: 150, md: 150, lg: 85 }}
+      mt={{ base: 125, sm: 125, md: 150, lg: 85 }}
     >
       <Box textAlign="center" maxW="90%" m="auto" w="520px">
         <Heading
           color=" hsl(255, 11%, 22%)"
           fontSize={{ base: 25, sm: 25, md: 35, lg: "38px" }}
         >
-          {" "}
           Advanced Statistics
         </Heading>
         <Text
@@ -34,6 +33,7 @@ const Stats = () => {
       </Box>
       <HStack
         justifyContent="space-between"
+        flexDir={{ base: "column", sm: "column", md: "column", lg: "initial" }}
         mt={85}
         pos="relative"
         _after={{
@@ -46,7 +46,15 @@ const Stats = () => {
           bg: "hsl(180, 66%, 49%)",
         }}
       >
-        <Box bg="white" w={330} p={5} borderRadius="base" zIndex="1">
+        <Box
+          bg="white"
+          w={330}
+          p={5}
+          borderRadius="base"
+          zIndex="1"
+          mb={{ base: 150, sm: 150, md: 150, lg: 0 }}
+          textAlign={{ base: "center", sm: "center", md: "center", lg: "left" }}
+        >
           <Image
             borderRadius="full"
             p={4}
@@ -54,6 +62,7 @@ const Stats = () => {
             src={brandImage}
             pos="absolute"
             top="-40px"
+            left={{ base: 125, sm: 125, md: 300, lg: "initial" }}
           ></Image>
           <Heading mt={7} color=" hsl(255, 11%, 22%)" mb={5} fontSize="22px">
             Brand Recognition
@@ -63,9 +72,25 @@ const Stats = () => {
             mean a thing. Branded links help instil confidence in your content.
           </Text>
         </Box>
-        maxW="90%"
-        <Box w={330} borderRadius="base" pos="relative" zIndex="1">
-          <Box mt="-80px" pos="absolute" p={5} bg="white">
+        <Box
+          w={330}
+          borderRadius="base"
+          pos="relative"
+          zIndex="1"
+          textAlign={{ base: "center", sm: "center", md: "center", lg: "left" }}
+        >
+          <Box
+            mt="-80px"
+            pos={{
+              base: "relative",
+              sm: "relative",
+              md: "relative",
+              lg: "absolute",
+            }}
+            p={5}
+            bg="white"
+            mb={120}
+          >
             <Image
               borderRadius="full"
               p={4}
@@ -73,6 +98,7 @@ const Stats = () => {
               src={detailsImage}
               pos="absolute"
               top="-40px"
+              left={{ base: 125, sm: 125, md: 125, lg: "initial" }}
             ></Image>
             <Heading mt={7} color=" hsl(255, 11%, 22%)" mb={5} fontSize="22px">
               Detailed Records
@@ -84,8 +110,24 @@ const Stats = () => {
             </Text>
           </Box>
         </Box>
-        <Box w={310} borderRadius="base" zIndex="1">
-          <Box mt="-40px" pos="absolute" p={5} bg="white">
+        <Box
+          w={{ base: 330, sm: 330, md: 330, lg: 310 }}
+          borderRadius="base"
+          zIndex="1"
+          textAlign={{ base: "center", sm: "center", md: "center", lg: "left" }}
+          mb={{ base: 330, sm: 330, md: 310, lg: 310 }}
+        >
+          <Box
+            mt="-40px"
+            pos={{
+              base: "relative",
+              sm: "relative",
+              md: "relative",
+              lg: "absolute",
+            }}
+            p={5}
+            bg="white"
+          >
             <Image
               borderRadius="full"
               p={4}
@@ -93,6 +135,7 @@ const Stats = () => {
               src={customizeImage}
               pos="absolute"
               top="-40px"
+              left={{ base: 125, sm: 125, md: 125, lg: "initial" }}
             ></Image>
             <Heading mt={7} color=" hsl(255, 11%, 22%)" mb={5} fontSize="22px">
               Fully Customizable
